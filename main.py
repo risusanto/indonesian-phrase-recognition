@@ -33,6 +33,9 @@ def main_prog():
         if (param[0] == '--help'):
             print('-fp "<string>": Menampilkan list frasa preposional dalam kalimat')
             print('-tag "<word>": Menampilkan kelas suatu kata')
+            print()
+            print('--help: Menampilkan bantuan')
+            print('--train: Melatih model corpus')
         elif param[0] == '-train':
             print('Training model...')
             trainModel()

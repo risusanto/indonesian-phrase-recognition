@@ -29,13 +29,32 @@ def gath_phrase(prep,data):
             if(data[idx + 2][1] == 'VB'):
                 word.append(data[idx][0])
                 word.append(data[idx+1][0])
-            elif data[idx+1][1] == 'PR':
+            if data[idx+1][1] == 'PR':
                 word.append(data[idx][0])
                 word.append(data[idx+1][0])
-            else:
+            if data[idx+1][1] == 'PRP':
+                if (data[idx + 2][1] == 'PRP'):
+                    word.append(data[idx][0])
+                    word.append(data[idx+1][0])
+                    word.append(data[idx + 2][0])
+                else:
+                    word.append(data[idx][0])
+                    word.append(data[idx+1][0])
+            if data[idx + 1][1] == 'NN':
                 word.append(data[idx][0])
                 word.append(data[idx+1][0])
                 word.append(data[idx + 2][0])
+            if data[idx + 1][1] == 'CD':
+                word.append(data[idx][0])
+                word.append(data[idx+1][0])
+                word.append(data[idx + 2][0])
+            if data[idx + 1][1] == 'NND':
+                word.append(data[idx][0])
+                word.append(data[idx+1][0])
+                word.append(data[idx + 2][0])
+            if data[idx + 1][1] == 'JJ':
+                word.append(data[idx][0])
+                word.append(data[idx+1][0])
         except:
             pass
         word_join = ' '.join(word)
