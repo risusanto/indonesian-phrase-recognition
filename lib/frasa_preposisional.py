@@ -26,7 +26,7 @@ def gath_phrase(prep,data):
         idx = prep[i]
 
         try:
-            if(data[idx + 2][1] == 'VB'):
+            if(data[idx + 1][1] == 'VB'):
                 word.append(data[idx][0])
                 word.append(data[idx+1][0])
             if data[idx+1][1] == 'PR':
